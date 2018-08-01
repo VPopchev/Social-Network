@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="search-form">
+        {{ form_start(form) }}
+        {{ form_end(form) }}
+    </div>
+    <section class="users-container">
+        {% for user in users %}
+            <article class="user-card">
+                <h2>{{ user.username }}</h2>
+                <div class="img-ctr">
+                    <img src="{{ 'app/images/users/' ~ user.profilePicture }}">
+                </div>
+                <h3>{{ user.firstName ~ ' ' ~ user.lastName }}</h3>
+                {% if app.user.areFriends(user) %}
+                    <p>Followed</p>
+                {% else %}
+                    <p><a href="{{ path('follow_friend', {'id': user.id}) }}">Follow</a></p>
+                {% endif %}
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+

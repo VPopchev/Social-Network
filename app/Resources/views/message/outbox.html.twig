@@ -1,0 +1,27 @@
+<h2 class="msg-heading">Outbox</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>To</th>
+        <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for message in messages %}
+        <tr>
+            <td>{{ message.receiver.username }}</td>
+            <td>{{ message.title }}</td>
+            <td>{{ message.sendDate|date }}</td>
+            <td>
+                <button id="read" onclick="readMsg(this, {{ message.id }})">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+                <button id="delete" onclick="deleteMsg(this, {{ message.id }})">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+

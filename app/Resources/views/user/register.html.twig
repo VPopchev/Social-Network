@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="text-center">
+        <fieldset>
+            {{ form_start(form) }}
+            <legend>Register</legend>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.email) }}
+                </div>
+                {{ form_widget(form.email) }}
+            </div>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.username) }}
+                </div>
+                {{ form_widget(form.username) }}
+            </div>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.firstName) }}
+                </div>
+                {{ form_widget(form.firstName) }}
+            </div>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.lastName) }}
+                </div>
+                {{ form_widget(form.lastName) }}
+            </div>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.password) }}
+                </div>
+                {{ form_widget(form.password) }}
+            </div>
+            <div class="form-cont">
+                <div class="lbl">
+                    {{ form_label(form.profilePicture) }}
+                </div>
+                {{ form_widget(form.profilePicture) }}
+            </div>
+            <div class="btns">
+                {{ form_widget(form.Register) }}
+            </div>
+            {{ form_end(form) }}
+        </fieldset>
+    </div>
+{% endblock %}
+

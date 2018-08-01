@@ -1,0 +1,13 @@
+<section class="message-view-container">
+    <article class="message">
+        <header>Title: <strong>{{ message.title }}</strong></header>
+        <hr>
+        <p class="msg-content">{{ message.content }}</p>
+        <hr>
+        <footer>
+            From: {{ message.sender.username }}<br/>
+            To: {{ message.receiver.username }}
+        </footer>
+    </article>
+</section>
+

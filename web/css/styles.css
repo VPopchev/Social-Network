@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("free-blue-background-2.jpg");
+    font-family: 'Montserrat',sans-serif;
+}
+
+header {
+    display: flex;
+    background: #0070A2;
+    padding: 15px;
+}
+
+.logo {
+    display: inline-block;
+    width: 20%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+}
+
+nav {
+}
+
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+header nav ul li a:hover {
+    color: #00b0ff;
+    border: 2px solid #00b2ff;
+}
+
+img {
+    width: 100%;
+    height: 225px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 150px;
+}
+
+
+table {
+    margin-top: 20px;
+    color: white;
+}
+
+
+.text-center {
+    color: white;
+    padding: 50px;
+}
+
+fieldset legend {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.btns {
+    margin-top: 20px;
+}
+
+.lbl {
+    display: inline-block;
+    padding: 10px 20px 0 0;
+    width: 120px;
+    font-size: 20px;
+}
+
+.form-cont {
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    display: inline-block;
+    width: 300px;
+}
+
+.post {
+    color: white;
+    border: 2px double white;
+    margin-top: 20px;
+}
+
+.comment-container {
+    width: 25%;
+
+}
+
+.comment {
+    padding: 15px 5px;
+    margin: 5px;
+    border: 1px solid #ff6e7a;
+    border-radius: 25px;
+}
+
+.comment small{
+    font-size: 10px;
+}
+
+.comment-container h3 {
+    text-align: center;
+}
+
+.comment p {
+    text-align: left;
+}
+
+.comment-text {
+    resize: none;
+    width: 190px;
+    height: 60px;
+}
+
+.comment-submit {
+    margin-top: 10px;
+    border: none;
+    background: #4042c8;
+    border-radius: 25px;
+    padding: 5px 15px;
+    color: white;
+    transition: all 0.9s;
+}
+
+.comment-submit:hover {
+    cursor: pointer;
+    background: #7a71ff;
+}
+
+.liked {
+    background-color: #00b2ff;
+    color: #ff2800;
+}
+
+.post-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+}
+
+.post-img-container a img{
+    width: 100%;
+}
+
+.post-container article {
+    width: 35%;
+    margin: 20px auto;
+    background: rgba(0,112,162,0.6);
+    border-radius: 15px;
+    color:white;
+}
+
+.profile-post-image {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-post-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post-username {
+    margin-left: 20px;
+}
+
+.post-container article header {
+    background: rgba(0,112,162,0.6);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    align-items: center;
+}
+.post-container article footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-date {
+    font-size: 12px;
+}
+
+.post-info {
+    padding: 10px;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.like-ctr {
+    display: flex;
+    align-items: baseline;
+}
+
+.like-ctr p {
+    cursor: pointer;
+}
+
+.like-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-weight: bolder;
+    border-radius: 3px;
+    margin-right: 3px;
+    transition: all .2s ease-in;
+}
+
+.like-btn:hover {
+    cursor: pointer;
+    background: #00b2ff;
+}
+
+.login-container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: white;
+}
+
+.login-container form div {
+    width: 50%;
+    margin:10px auto;
+    text-align: center;
+    display: flex;
+}
+
+.login-container form div i {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.login-container form div input {
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.login-container form div input::placeholder {
+    color: white;
+    font-size: 20px;
+}
+
+.login-container form div:last-of-type {
+    display: block;
+    text-align: center;
+}
+
+.login-container form div:last-of-type button {
+    padding: 5px 25px;
+    border: none;
+    background: #21f3ff;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.login-container form div:last-of-type button:hover {
+    cursor: pointer;
+    background: #1fd7e2;
+}
+
+.login-container form div:last-of-type a {
+    padding: 5px 25px;
+    background: #ff2b39;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login-container form div:last-of-type a:hover {
+    background: #cd242f;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-center form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-center form div {
+    margin: auto;
+}
+
+.text-center form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.form-cont {
+    width: 50%;
+}
+
+.lbl {
+    display: block;
+    width: 100%;
+}
+.text-center form div:last-of-type {
+    margin-top: 20px;
+}
+
+.text-center form div:last-of-type button {
+    border: none;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background: #1fd7e2;
+    color: white;
+}
+
+.text-center form div:last-of-type button:hover {
+    cursor: pointer;
+    background: #1dcad4;
+}
+.profile {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin:40px auto;
+}
+
+.user-info {
+    width: 50%;
+    color: white;
+}
+
+.profile-image-ctr {
+    width: 40%;
+}
+
+.container {
+    width: 95%;
+    margin: 30px auto;
+    color: white;
+    background: rgba(45, 103, 255, 0.6);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container article {
+    border-radius: 10px;
+    width: 45%;
+    margin-top: 20px;
+}
+
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.search-form {
+    padding: 10px 30px;
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-form form input {
+    padding:5px 20px;
+    color: white;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 5px;
+}
+
+.search-form form button {
+    margin-left: 5px;
+    color: white;
+    font-size: 18px;
+    background: #ff5c29;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+.search-form form button:hover {
+    cursor: pointer;
+        background: #b1411c;
+}
+
+.users-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.user-card {
+    width: 25%;
+    margin: 5px;
+    background: rgba(255,255,255,.6);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.img-ctr img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-card h2 {
+    color: #696969;
+    margin-bottom: 5px;
+}
+
+.user-card h3 {
+    color: #696969;
+}
+
+.user-card p a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+.user-card p a:hover {
+    cursor: pointer;
+    color: #4b72ff;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mail-nav {
+    background: rgba(255,255,255,.6);
+    padding: 5px;
+    width: 25%;
+}
+
+.msg-container {
+    background: rgba(50,100,200,.6);
+    padding: 20px;
+    width: 80%;
+}
+
+.msg-container table {
+    width: 100%;
+    text-align: center;
+}
+
+.msg-container table thead tr{
+    padding-bottom: 20px;
+}
+
+.msg-heading {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.mail-nav ul {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.mail-nav ul li {
+    background: #00b2ff;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 1s;
+    font-weight: bold;
+}
+
+.mail-nav ul li:hover {
+    cursor: pointer;
+    background: #3cf7ff;
+}
+
+.message {
+    width: 50%;
+    margin:10px auto;
+    background: rgba(255,255,255,.6);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.message header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.new-message {
+    width: 30%;
+    margin:10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-message input {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.new-message textarea {
+    resize: none;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.new-message span {
+    display: block;
+}
+
+.new-message button {
+    border: none;
+    background: #00b0ff;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.new-message button:hover {
+    cursor: pointer;
+}
+
+.parent {
+    background: #afafaf;
+    width: 800px;
+    margin: auto;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.child {
+    width: 0;
+    height: 20px;
+    background: #000000;
+}
+
+
+.story-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.story-container article {
+    text-align: center;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.dot {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.dot:hover {
+    cursor: pointer;
+}
+
+.dot img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #ff5810;
+}
+
+.viewed img {
+    border: 8px solid #c6c8c8;
+}
+
+.timed-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.post-likes {
+    list-style-type: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    width: 500px;
+    border-radius: 20px;
+}
+
+.like {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.like img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.like-name {
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#read {
+    border: none;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #f4ff22;
+}
+
+#read:hover {
+    color: #ffc701;
+}
+
+#delete {
+    border: none;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+    color: #ff4b46;
+}
+
+#delete:hover {
+    color: #ff180e;
+}
+
+.success-mgs {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-color: lawngreen;
+}
+
+

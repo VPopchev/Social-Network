@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="profile">
+        <div class="user-info">
+            Username: {{ user.username }} <br/>
+            Full Name: {{ user.firstName ~ ' ' ~ user.lastName }}<br/>
+            Email: {{ user.email }}
+        </div>
+        <div class="profile-image-ctr">
+            <img src="{{ 'app/images/users/' ~ user.profilePicture }}" alt="{{ user.username }} profile">
+        </div>
+    </section>
+{% endblock %}
+

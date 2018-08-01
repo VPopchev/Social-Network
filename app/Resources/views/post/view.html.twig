@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <article class="post-view">
+            <header>
+                <h2>{{ post.title }}</h2>
+            </header>
+            <img src="{{ asset('app/images/' ~ post.image) }}" class="img-responsive"/>
+            <p>
+                {{ post.description }}
+            </p>
+            <p class="pull-right">
+
+            </p>
+
+            <small class="author pull-right">
+                By: {{ post.owner.username }}
+            </small>
+            <footer>
+
+            </footer>
+        </article>
+        <div class="comment-container">
+            <h3>Comments</h3>
+            {% for comment in post.comments %}
+                <div class="comment">
+                    <p>{{ comment.owner.username }}: {{ comment.content }}</p>
+                    <small>{{ comment.date|date }}</small>
+                </div>
+            {% endfor %}
+        </div>
+        {% if app.user %}
+            <div class="write-comment">
+                <h2>Leave Comment</h2>
+                <label>
+                    <textarea id="comment-box" class="comment-text"></textarea>
+                    <button id="sbmt-comment" class="comment-submit" onclick="addComment({{ post.id }})">
+                        comment
+                    </button>
+                </label>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('comment.js') }}"></script>
+{% endblock %}

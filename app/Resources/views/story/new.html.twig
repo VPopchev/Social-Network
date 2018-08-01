@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="text-center">
+        {{ form_start(form) }}
+        <div class="form-cont">
+            <div class="lbl">
+                {{ form_label(form.picture) }}
+            </div>
+            {{ form_widget(form.picture) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

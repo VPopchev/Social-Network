@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Go Social</h1>
+    <section class="story-container">
+        {% for story in stories %}
+            <article onclick="appendStory(this,{{'\'' ~ story.picture ~ '\''}},{{ story.id }})">
+                <div class="dot{{ story.areViewedByUser(app.user) ? ' viewed ' : '' }}">
+                    <img src="{{ 'app/images/users/' ~ story.owner.profilePicture }}">
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+    <section class="timed-container hidden">
+        <div class="parent">
+            <div class="child">
+
+            </div>
+        </div>
+    </section>
+    <section class="post-container">
+        {% for post in posts %}
+            <article>
+                <header>
+                    <div class="profile-post-image">
+                        <img src="{{ 'app/images/users/' ~ post.owner.profilePicture }}">
+                    </div>
+                    <h3 class="post-username">{{ post.owner.username }}</h3>
+                </header>
+                <div class="post-img-container">
+                    <a href="{{ path('view_post', {'id': post.id}) }}">
+                        <img src="{{ 'app/images/' ~ post.image }}" class="card-img-top">
+                    </a>
+                </div>
+                <div class="post-info">
+                    <p class="post-title">{{ post.title }}</p>
+                    <p class="post-description">{{ post.description }}</p>
+                </div>
+                <footer>
+                    <div class="like-ctr">
+                        {% if app.user %}
+                            <button id="like-{{ post.id }}"
+                                    {{ post.liked(app.user) ?
+                                    'class="like-btn liked"' :
+                                    'class="like-btn"' }}
+                                    onclick="like({{ post.id }})">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+                        {% endif %}
+                        <p onclick="viewLikes({{ post.id }})" id="likes-{{ post.id }}">
+                            Likes: {{ post.likes|length}}
+                        </p>
+                    </div>
+                    <span class="post-date">{{ post.postDate|date }}</span>
+                </footer>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('like.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('story.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('likes.js') }}"></script>
+{% endblock %}

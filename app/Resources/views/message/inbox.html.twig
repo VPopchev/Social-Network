@@ -1,0 +1,31 @@
+<h2 class="msg-heading">Inbox</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>From</th>
+        <th>Email</th>
+        <th>Title</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for message in messages %}
+        <tr {{ message.isRead == 0 ? 'style="background-color:lightgreen"' :
+        'style=""'}}>
+            <td>{{ message.sender.username }}</td>
+            <td>{{ message.sender.email }}</td>
+            <td>{{ message.title }}</td>
+            <td>{{ message.sendDate|date }}</td>
+            <td>
+                <button id="read" onclick="readMsg(this, {{ message.id }})">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+                <button id="delete" onclick="deleteMsg(this, {{ message.id }})">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
